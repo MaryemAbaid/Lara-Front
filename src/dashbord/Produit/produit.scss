@@ -1,0 +1,178 @@
+#contact-tab-pane .container {
+  /* max-width: 900px; */
+  /* width: 100%; */
+  margin: auto;
+  padding: 15px;
+  /* box-shadow: 0 2px 20px #0001,0 1px 6px #0001; */
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+._table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+._table :is(th, td) {
+  border: 1px solid #0002;
+  padding: 8px 10px;
+}
+
+.form_controle {
+  border: 1px solid #0002;
+  background-color: transparent;
+  outline: none;
+  padding: 8px 5px;
+  /* width:100%; */
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.selet_option {
+  /* padding:10px 20px; */
+  width: 100px;
+}
+
+.form-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10003;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  transition: all 1s linear;
+
+  &.active {
+    display: block;
+  }
+
+  form {
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin: auto;
+    max-width: 50rem;
+
+    transition: all 1s linear;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    i {
+      color: black;
+      font-size: 1.5rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+      transition: .5s all linear;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    p {
+      font-size: 2rem;
+      color: var(--light-color);
+      margin: 1.5rem 0;
+
+      span {
+        font-size: 2rem;
+        color: var(--light-color);
+        border-bottom: .5px solid var(--peru);
+        margin: 1.5rem 0;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        &:hover {
+          color: var(--peru);
+        }
+      }
+    }
+
+
+  }
+
+
+
+}
+
+
+
+
+
+.form-container form .box {
+  margin: 1rem 0;
+  background-color: var(--light-bg);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--black);
+  width: 100%;
+  text-transform: lowercase;
+  border-radius: .5rem;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile+label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: black;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  transition: all 0.2s linear;
+}
+
+.inputfile:focus+label,
+.inputfile+label:hover,
+.inputfile+label:hover i {
+  background-color: #dd1dd7;
+  color: #fff;
+  box-shadow: none;
+
+}
+
+.inputfile+label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
+.Promotion {
+  position: relative;
+
+  span {
+    position: absolute;
+    background-color: #fff;
+    color: #dd1dd7;
+    right: 0;
+    top: 2rem;
+    transition: all .5s linear;
+    display: none;z-index: 999;
+  }
+
+  &:hover>span {
+    display: block;
+  }
+}
